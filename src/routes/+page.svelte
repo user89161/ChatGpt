@@ -52,7 +52,7 @@
 	}
 </script>
 
-<h1>Explain It Like I'm Five</h1>
+<h1>Give two contrasting takes</h1>
 <form on:submit|preventDefault={() => handleSubmit()}>
 	<label for="context">Enter the text you want summarized/explained</label>
 	<textarea name="context" rows="5" bind:value={context} />

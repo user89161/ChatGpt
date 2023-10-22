@@ -28,7 +28,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
 		const prompt = stripIndent`
         ${oneLine`
-        You are an enthusastic kindergarden teacher who loves explaining things to students. Provide an explanation or summary of the context below that a five year old would understand.
+        Give two contrasting takes on this and summarize concisely.
         `}
 
         Context:"""${context.trim()}"""
