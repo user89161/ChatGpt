@@ -54,7 +54,7 @@
 
 <h1>Give two contrasting takes</h1>
 <form on:submit|preventDefault={() => handleSubmit()}>
-	<label for="context">Enter the text you want summarized/explained</label>
+	<label for="context">Enter text to generate contrasting takes</label>
 	<textarea name="context" rows="5" bind:value={context} />
 	<button>Explain it</button>
 	<div class="pt-4">
