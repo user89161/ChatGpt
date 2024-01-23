@@ -22,9 +22,9 @@
 		context = ''
 
 		eventSource.addEventListener('error', (e) => {
-			error = true
-			loading = false
-			alert('Something went wrong!')
+		//	error = true
+		//	loading = false
+		//	alert('Something went wrong!')
 		})
 
 		eventSource.addEventListener('message', (e) => {
@@ -40,11 +40,13 @@
 				const [{ text }] = completionResponse.choices
 
 				answer = (answer ?? '') + text
-			} catch (err) {
-				error = true
-				loading = false
-				console.error(err)
-				alert('Something went wrong!')
+			
+		} 
+		catch (err) {
+			//	error = true
+			//	loading = false
+			//	console.error(err)
+			//	alert('Something went wrong!')
 			}
 		})
 
@@ -54,7 +56,7 @@
 
 <h1>Give two contrasting takes</h1>
 <form on:submit|preventDefault={() => handleSubmit()}>
-	<label for="context">Enter text to generate contrasting takes</label>
+	<label for="context">Enter text to generate contrasting takes (if rate limit is for openAPI calls, generate button may not work)</label>
 	<textarea name="context" rows="5" bind:value={context} />
 	<button>Explain it</button>
 	<div class="pt-4">
